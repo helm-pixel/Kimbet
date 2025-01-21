@@ -7,38 +7,66 @@
     <link rel="stylesheet" href="css/styles.css"> <!-- Link to the CSS file -->
 </head>
 <body>
-    <header>
-        <div class="logo"></div>
-        <nav>
-            <ul>
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="accommodation.html">ACCOMMODATION</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-                <li><a href="support.html">SUPPORT</a></li>
-                <li id="user-menu">
-                    <!-- User menu will be dynamically updated here -->
-                </li>
-            </ul>
-        </nav>
-    </header>
+<header>
+    <div class="logo-container">
+        <img src="img/logo.jpg" alt="Logo" class="logo">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="home.php">HOME</a></li>
+            <li><a href="accommodation.php">ACCOMMODATION</a></li>
+            <li><a href="services.php">SERVICES</a></li>
+            <li>
+  
+                <a href="support.php" class="dropdown-trigger">SUPPORT</a>
+                <div class="dropdown">
+                    <a href="#faq">FAQ</a>
+                    <a href="#contact-support">CONTACT SUPPORT</a>
+                    <a href="#booking-policies">BOOKING POLICIES</a>
+                    <a href="#user-guides">USER GUIDES</a>
+                    <a href="#terms-conditions">TERMS & CONDITIONS</a>
+                    <a href="#privacy-policy">PRIVACY POLICY</a>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown-trigger">&#x1F464;</div>
+                <div class="dropdown">
+                    <a href="#account">MY ACCOUNT</a>
+                    <a href="#booking">BOOKING</a>
+                    <a href="#submit-feedback">SUBMIT FEEDBACK</a>
+                    <a href="#review">REVIEW</a>
+                    <a href="#setting">SETTING</a>
+                    <a href="#logout">LOG OUT</a>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>
 
-<div class="container">
-    <div class="accommodation-section collage">
-        <h1>Our Accommodations</h1>
-        <div class="accommodation-item">
-            <h2>Room Type 1</h2>
-            <img src="room1.jpg" alt="Room Type 1" style="width:300px;height:auto;"> <!-- Placeholder for room image -->
-            <p>Description of Room Type 1.</p>
-        </div>
-        <div class="accommodation-item">
-            <h2>Room Type 2</h2>
-            <img src="room2.jpg" alt="Room Type 2" style="width:300px;height:auto;"> <!-- Placeholder for room image -->
-            <p>Description of Room Type 2.</p>
-        </div>
-        <div class="accommodation-item">
-            <h2>Room Type 3</h2>
-            <img src="room3.jpg" alt="Room Type 3" style="width:300px;height:auto;"> <!-- Placeholder for room image -->
-            <p>Description of Room Type 3.</p>
+    <div class="container">
+        <div class="accommodation-section">
+            <h1>Our Accommodations</h1>
+            <div class="accommodation-item">
+                <h2>Luxury Suite</h2>
+                <img src="img/luxury-suite.jpg" alt="Luxury Suite" class="accommodation-image">
+                <p>Experience the ultimate in luxury and comfort in our luxury suites, featuring king-sized beds, stunning views, and premium amenities.</p>
+                <p class="price">Price: $250 per night</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="accommodation-item">
+                <h2>Deluxe Room</h2>
+                <img src="img/deluxe-room.jpg" alt="Deluxe Room" class="accommodation-image">
+                <p>Our deluxe rooms offer a perfect blend of comfort and elegance, with queen-sized beds, modern decor, and all essential amenities.</p>
+                <p class="price">Price: $150 per night</p>
+                <button class="book-now">Book Now</button>
+            </div>
+            <div class="accommodation-item">
+                <h2>Standard Room</h2>
+                <img src="img/standard-room.jpg" alt="Standard Room" class="accommodation-image">
+                <p>Enjoy a comfortable stay in our standard rooms, featuring twin beds, contemporary decor, and essential amenities at an affordable price.</p>
+                <p class="price">Price: $100 per night</p>
+                <button class="book-now">Book Now</button>
+            </div>
         </div>
     </div>
 
@@ -46,6 +74,6 @@
         <p>Contact Us | Address | Email | Phone</p>
     </footer>
 
-    <script src="script.js"></script> <!-- Link to the JavaScript file -->
+    <script src="js/script.js"></script> <!-- Link to the JavaScript file -->
 </body>
 </html>
