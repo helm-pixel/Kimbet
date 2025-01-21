@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F0F0D7; /* Bottom color */
+    color: #000; /* Black text */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes full height */
+}
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #727D73; /* Top color */
+    color: #FFF; /* White text */
+}
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+nav ul li {
+    position: relative;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #FFF; /* White text */
+    font-weight: bold;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+   overflow: hidden;
+    min-width: 150px;
+}
+.dropdown a {
+    display: block;
+    padding: 10px;
+    color: #333;
+    text-decoration: none;
+    text-align: left;
+}
+.dropdown a:hover {
+    background-color: #ddd;
+}
+.dropdown-trigger {
+    cursor: pointer;
+    padding: 5px;
+}
+.dropdown-trigger:hover + .dropdown,
+.dropdown:hover {
+    display: block;
+}
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background-color: #abb5ac;
+}
+.sections {
+   display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    opacity: 0;
+    transition: opacity 1s;
+}
+.sections.visible {
+    opacity: 1;
+}
+.section {
+    width: 30%;
+    padding: 20px;
+    background-color: #aeae9b;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+footer {
+    text-align: center;
+    padding: 5px;
+    background-color: #727D73; /* Top color */
+    color: #FFF; /* White text */
+    margin-top: auto; /* Pushes the footer to the bottom */
+}
+
+.logo {
+    background-image: url('../logo/logo.png');
+    width: 50px; /* Set the width */
+    height: 50px; /* Set the height */
+    background-size: contain; /* Ensure the image fits within the div */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+}
