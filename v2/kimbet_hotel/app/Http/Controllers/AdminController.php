@@ -50,4 +50,9 @@ class AdminController extends Controller{
 
         return redirect()->back();
     }
+
+    public function view_room(){
+        $data = Room::all();
+        return view('admin.view_room', compact('data'));
+    }
 }
