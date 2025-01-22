@@ -1,18 +1,15 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Dashboard</title>
-</head>
-<body>
-<x-app-layout>
-    <x-slot name="header">
-        <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Admin Dashboard') }}
-        </h2>
-    </x-slot>
+<html>
+  <head> 
+    @include('admin.css')
+  </head>
+  <body>
+    @include('admin.header')
     
-</x-app-layout>
-</body>
+    @include('admin.sidebar')
+    
+    @include('admin.body')
+        
+    @include('admin.footer')
+  </body>
 </html>
