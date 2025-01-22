@@ -1,0 +1,31 @@
+body{
+    background: url('img/bg.jpg');
+    background-blend-mode: multiply;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+img{
+    max-width: 150px;
+    width: 100%;
+}
+
+.nav-linki{
+    font-weight: 600;
+    color: #000;
+}
+
+.navbar-toggler:focus{
+    box-shadow: none;
+}
+
+.dropdown>.dropdown-menu{
+    border-radius: 0;
+    background-color: #fff;
+    border: none;
+}
+
+.lni-service-bell-1{
+    font-size: 1.5rem;
+}
