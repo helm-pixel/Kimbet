@@ -8,6 +8,7 @@ use Illuminate\Support\Facades\Auth;
 use App\Models\Room;
 use App\Models\Booking;
 use App\Models\Gallery;
+use App\Models\Contact;
 
 class AdminController extends Controller{
     public function index(){
@@ -15,7 +16,8 @@ class AdminController extends Controller{
             $usertype = Auth::user()->usertype;
             if($usertype == 'user'){
                 $room = Room::all();
-                return view('home.index', compact('room'));
+                $gallery = Gallery::all();
+                return view('home.index', compact('room', 'gallery'));
             }
 
             else if($usertype == 'admin'){
@@ -30,7 +32,8 @@ class AdminController extends Controller{
 
     public function home(){
         $room = Room::all();
-        return view('home.index', compact('room'));
+        $gallery = Gallery::all();
+        return view('home.index', compact('room', 'gallery'));
     }
 
     public function create_room(){
@@ -143,5 +146,10 @@ class AdminController extends Controller{
         $data = Gallery::find($id);
         $data->delete();
         return redirect()->back();
+    }
+
+    public function all_messages(Request $request){
+        $data = Contact::all();
+        return view('admin.all_messages', compact('data'));
     }
 }
