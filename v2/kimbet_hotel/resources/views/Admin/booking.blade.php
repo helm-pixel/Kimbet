@@ -66,9 +66,7 @@
                             <span style="color: yellow">Waiting</span>
                             @endif
                         </td>
-                        <td>
-                            <img style="width: 200;" src="/room/{{$data->room->image}}" alt="">
-                        </td>
+                        <td> {{$data->room_title}} </td>
                         <td>
                             <a onClick="return confirm('Are sure want to delete this?')" href="{{url('delete_booking', $data->id)}}" class="btn btn-danger">Delete</a>
                         </td>
