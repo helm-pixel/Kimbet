@@ -98,4 +98,25 @@ class AdminController extends Controller{
         $data->delete();
         return redirect()->back();
     }
+
+    public function approve_book($id){
+        $booking = Booking::find($id);
+        $booking->status = 'approve';
+        $booking->save();
+
+        return redirect()->back();
+    }
+
+    public function reject_book($id){
+        $booking = Booking::find($id);
+        if ($booking) {
+            $booking->status = 'rejected';
+            $booking->save();
+        } else {
+            // Handle the case where the booking is not found
+            return redirect()->back()->with('error', 'Booking not found');
+        }
+
+        return redirect()->back();
+    }
 }
