@@ -2,6 +2,8 @@
 <html lang="en">
    <head>
     <base href="/public">
+    <!-- CSS Bootstrap CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
       @include('home.css')
       <style>
          label{
@@ -65,6 +67,15 @@
                </div>
                <div class="col-md-4">
                   <h1 style="font-size: 40px!important;">Book Room</h1>
+                  <div>
+                     @if(session()->has('message'))
+                     <div class="alert alert-success">
+                        <button class="close" type="button" data-bs-dismiss="alert">X</button>
+                        {{session()->get('message')}}
+                     </div>
+                     @endif
+                  </div>
+                  
                   @if($errors)
                   @foreach($errors->all() as $errors)
                   <li style="color: red;">
@@ -133,5 +144,7 @@
             $('#endDate').attr('min', maxDate);
          });
       </script>
+      <!-- JS Bootstrap CDN -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js" integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy" crossorigin="anonymous"></script>
    </body>
 </html>
